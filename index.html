@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17152b">
+  <meta name="description" content="Християнські пісні Іванки — музика віри, надії та світла.">
+  <title>Christian Songs by Ivanka</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-glow page-glow-one" aria-hidden="true"></div>
+  <div class="page-glow page-glow-two" aria-hidden="true"></div>
+  <header class="topbar wrap">
+    <a class="brand" href="#top" aria-label="Christian Songs by Ivanka — на початок">
+      <span class="brand-mark" aria-hidden="true">✦</span>
+      <span><strong>IVANKA</strong><small>SONGS OF FAITH</small></span>
+    </a>
+    <nav aria-label="Основна навігація">
+      <a href="#music">Музика</a>
+      <a href="#about">Про сторінку</a>
+    </nav>
+    <button class="button button-quiet" id="admin-open" type="button">Вхід адміністратора</button>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> ПІСНІ ВІРИ ТА НАДІЇ</div>
+        <h1 id="hero-title">Музика, що<br><em>торкається серця.</em></h1>
+        <p id="hero-description">Християнські пісні Іванки — щирі мелодії про віру, любов і світло, яке ми несемо одне одному.</p>
+        <a class="button button-primary" href="#music">Слухати пісні <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+        <div class="art-sun"><span>✦</span></div>
+        <div class="art-note note-one">♪</div><div class="art-note note-two">♫</div>
+        <div class="art-label">МУЗИКА<br>З ДУШЕЮ</div>
+      </div>
+      <div class="hero-footnote"><span>01</span><span class="footnote-line"></span><span>МЕЛОДІЇ ДЛЯ ТВОЄЇ ДУШІ</span></div>
+    </section>
+
+    <section class="music-section wrap" id="music" aria-labelledby="music-title">
+      <div class="section-head">
+        <div><div class="eyebrow">ТВОЯ МУЗИЧНА ПАУЗА</div><h2 id="music-title">Пісні</h2></div>
+        <label class="searchbox"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Знайти пісню..." aria-label="Знайти пісню"></label>
+      </div>
+      <div id="notice" class="notice" role="status" aria-live="polite"></div>
+      <div id="track-list" class="track-list" aria-live="polite">
+        <div class="empty-state"><div class="empty-icon" aria-hidden="true">♫</div><h3>Тут звучатимуть твої пісні</h3><p>Музика з’явиться після під’єднання аудіосховища.</p></div>
+      </div>
+      <div class="library-foot"><span class="pulse-dot"></span><span id="track-count">Музична бібліотека</span><span class="library-rule"></span><span>ЗРОБЛЕНО З ЛЮБОВ’Ю</span></div>
+    </section>
+
+    <section class="about-section wrap" id="about">
+      <div class="about-symbol" aria-hidden="true">✧</div>
+      <div><div class="eyebrow">КІЛЬКА СЛІВ</div><h2>Віра звучить<br>по-різному.</h2></div>
+      <p>Ця сторінка — місце для пісень, що народилися з віри та бажання ділитися надією. Обирай мелодію, натискай play і нехай вона стане частиною твого дня.</p>
+    </section>
+
+    <section class="admin-panel wrap" id="admin-panel" hidden aria-labelledby="admin-title">
+      <div class="admin-heading"><div><div class="eyebrow">ПРИВАТНИЙ РОЗДІЛ</div><h2 id="admin-title">Керування сайтом</h2></div><button class="button button-quiet" id="sign-out" type="button">Вийти</button></div>
+      <form id="site-settings-form" class="settings-form">
+        <label>Заголовок сторінки<input name="title" maxlength="80" required></label>
+        <label>Короткий опис<textarea name="description" rows="2" maxlength="240" required></textarea></label>
+        <button class="button button-secondary" type="submit">Зберегти текст</button>
+      </form>
+      <div class="upload-heading"><div><h3>Додати пісню</h3><p>MP3, M4A, WAV, OGG або FLAC · до 50 МБ</p></div></div>
+      <form id="upload-form" class="upload-form">
+        <label class="file-picker"><span class="upload-icon" aria-hidden="true">＋</span><span><strong>Обери аудіофайл</strong><small id="file-name">Файл ще не вибрано</small></span><input id="audio-file" name="audio" type="file" accept="audio/*" required></label>
+        <div class="form-grid"><label>Назва пісні<input name="title" maxlength="100" required></label><label>Виконавець<input name="artist" maxlength="100" value="Іванка" required></label></div>
+        <label>Короткий опис <span class="optional">необов’язково</span><input name="description" maxlength="180" placeholder="Наприклад: пісня про надію"></label>
+        <button class="button button-primary" type="submit">Завантажити пісню</button>
+        <p class="form-status" id="upload-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer wrap"><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">✦</span><span><strong>IVANKA</strong><small>SONGS OF FAITH</small></span></a><p>Нехай музика нагадує про світло.</p><span>© <span id="year"></span> CHRISTIAN SONGS BY IVANKA</span></footer>
+
+  <dialog id="login-dialog" class="login-dialog" aria-labelledby="login-title">
+    <form id="login-form" class="login-card">
+      <button class="dialog-close" type="button" id="login-close" aria-label="Закрити">×</button>
+      <div class="brand-mark login-mark" aria-hidden="true">✦</div>
+      <div class="eyebrow">ЛИШЕ ДЛЯ АДМІНІСТРАТОРА</div>
+      <h2 id="login-title">Раді бачити</h2>
+      <p>Увійди, щоб керувати піснями та текстом сторінки.</p>
+      <label>Email<input name="email" type="email" autocomplete="username" required></label>
+      <label>Пароль<input name="password" type="password" autocomplete="current-password" required></label>
+      <button class="button button-primary" type="submit">Увійти</button>
+      <p id="login-status" class="form-status" role="status" aria-live="polite"></p>
+      <small class="login-note">Реєстрація відкрита лише адміністратору через панель Supabase.</small>
+    </form>
+  </dialog>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
